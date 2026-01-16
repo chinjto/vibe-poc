@@ -1,59 +1,90 @@
-# VibePoc
+# Vibe POC
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+> A Proof of Concept project to enhance vibe coding skills and explore **BDD (Behavior-Driven Development)** with AI-generated e2e tests.
 
-## Development server
+## About This Project
 
-To start a local development server, run:
+This POC serves as a learning playground to:
+- 🎯 Improve coding practices and architectural decisions
+- 🤖 Experiment with AI-assisted test generation for e2e scenarios
+- 📋 Implement BDD principles using Cypress
+- 🔄 Iterate quickly on feature development with automated test coverage
+
+## Tech Stack
+
+- **Framework**: Angular 20+ with standalone components
+- **Styling**: SCSS
+- **Testing**: Cypress for e2e and component testing
+- **Package Manager**: npm
+- **Routing**: Angular Router
+
+## Quick Start
+
+### Prerequisites
+- Node.js (v20+)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Running E2E Tests
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Or open Cypress UI:
 
-## Additional Resources
+```bash
+npx cypress open
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Building for Production
+
+```bash
+ng build
+```
+
+Output will be in `dist/` directory.
+
+## Commit Convention
+
+This project follows [Conventional Commits](COMMIT_CONVENTIONS.md). All commits are validated via commitlint hooks.
+
+Example:
+```bash
+git commit -m "feat(auth): add login functionality"
+```
+
+Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`
+
+## Project Structure
+
+```
+src/
+├── app/           # Application components & services
+├── index.html     # Main HTML
+└── styles.scss    # Global styles
+
+cypress/
+├── e2e/          # End-to-end test specifications
+├── fixtures/     # Test data
+└── support/      # Test utilities & commands
+```
+
+## Resources
+
+- [Angular Documentation](https://angular.dev)
+- [Cypress Documentation](https://docs.cypress.io)
+- [Conventional Commits](https://www.conventionalcommits.org)
