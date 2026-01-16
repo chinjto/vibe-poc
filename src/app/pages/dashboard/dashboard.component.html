@@ -1,0 +1,147 @@
+<div class="app-container">
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <h1 class="app-title">🎵 Vibe POC</h1>
+        <p class="app-subtitle">BDD-First Development with AI-Generated Tests</p>
+      </div>
+      <div class="header-actions">
+        <app-theme-toggle></app-theme-toggle>
+        <button pButton type="button" icon="pi pi-sign-in" class="p-button-rounded p-button-text" title="Go to Login" (click)="goToLogin()"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Welcome to Vibe POC</h2>
+        <p class="hero-description">
+          A proof of concept exploring behavior-driven development with Angular, Cypress, and AI-assisted e2e test generation.
+        </p>
+        <div class="hero-actions">
+          <button pButton type="button" label="Get Started" class="p-button-primary"></button>
+          <button pButton type="button" label="Learn More" class="p-button-outlined"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <!-- Feature 1: BDD -->
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>BDD Approach</h3>
+          <p>Tests are written first in plain language, defining the behavior before implementation.</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+        <!-- Feature 2: AI-Assisted E2E -->
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI-Assisted E2E</h3>
+          <p>Generate and maintain e2e tests with AI, reducing manual effort and improving coverage.</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+        <!-- Feature 3: PrimeNG UI -->
+        <div class="feature-card">
+          <div class="feature-icon">🌈</div>
+          <h3>PrimeNG UI</h3>
+          <p>Beautiful, responsive UI built with PrimeNG and custom theming (yellow/stone, dark/light).</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+        <!-- Feature 4: Cypress Testing -->
+        <div class="feature-card">
+          <div class="feature-icon">🧪</div>
+          <h3>Cypress Testing</h3>
+          <p>Comprehensive e2e and component tests with custom commands and BDD scenarios.</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+        <!-- Feature 5: GitHub Automation -->
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>GitHub Automation</h3>
+          <p>Issue templates, labels, workflows, and project board automation for streamlined dev.</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+        <!-- Feature 6: Conventional Commits -->
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Conventional Commits</h3>
+          <p>Strict commit message format with commitlint validation ensuring clean history.</p>
+          <p class="feature-status">Status: <span class="badge-green">Active</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+      <h2>Current Development Status</h2>
+      <div class="status-cards">
+        <div class="status-card">
+          <h3>Feature 1: Authentication</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+          </div>
+          <p class="progress-label">
+            <strong>Tests:</strong> <span class="text-green">✓ 12 Created</span>
+            <br />
+            <strong>Implementation:</strong> <span class="text-gray">⏳ Pending</span>
+          </p>
+          <p class="small-text">
+            Covering login, protected routes, session persistence, and error handling.<br>
+            <span class="issue-ref">GitLab Issue: <a href="https://gitlab.com/chinjto/vibe-poc/-/issues/1" target="_blank">#1</a></span>
+          </p>
+        </div>
+
+        <div class="status-card">
+          <h3>Infrastructure</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100%"></div>
+          </div>
+          <p class="progress-label">
+            <strong>Setup:</strong> <span class="text-green">✓ Complete</span>
+          </p>
+          <p class="small-text">
+            GitHub issues templates, CI/CD workflows, conventional commits, theme system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+      <h2>Quick Links</h2>
+      <div class="links-grid">
+        <a href="https://github.com/chinjto/vibe-poc" target="_blank" class="link-card">
+          <span class="link-icon">🔗</span>
+          <span class="link-text">GitHub Repository</span>
+        </a>
+        <a href="https://docs.cypress.io" target="_blank" class="link-card">
+          <span class="link-icon">📖</span>
+          <span class="link-text">Cypress Docs</span>
+        </a>
+        <a href="https://angular.dev" target="_blank" class="link-card">
+          <span class="link-icon">⚙️</span>
+          <span class="link-text">Angular Docs</span>
+        </a>
+        <a href="https://primeng.org" target="_blank" class="link-card">
+          <span class="link-icon">🎨</span>
+          <span class="link-text">PrimeNG Docs</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>Vibe POC &copy; 2026 - A BDD-First Development Experiment</p>
+    <p class="footer-text">
+      Exploring the intersection of behavior-driven development, AI-assisted testing, and modern web technologies.
+    </p>
+  </footer>
+</div>
