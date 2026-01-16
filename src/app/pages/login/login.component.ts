@@ -6,6 +6,8 @@ import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { ThemeToggleComponent } from '../../components/theme-toggle/theme-toggle.component';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -27,9 +29,9 @@ export class LoginComponent {
   error: string | null = null;
   loading = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
   }
@@ -37,14 +39,14 @@ export class LoginComponent {
   submit() {
     this.error = null;
     this.loading = true;
-    // Simulate async login
     setTimeout(() => {
       this.loading = false;
-      if (this.loginForm.value.email !== 'user@example.com' || this.loginForm.value.password !== 'password') {
-        this.error = 'Invalid email or password.';
+      const { email, password } = this.loginForm.value;
+      if (this.auth.login(email, password)) {
+        this.router.navigate(['/']);
       } else {
-        // TODO: Implement navigation to dashboard
+        this.error = 'Invalid email or password.';
       }
-    }, 1000);
+    }, 500);
   }
 }
