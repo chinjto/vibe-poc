@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://angular.dev
+    about: Check Angular documentation for questions
+  - name: Cypress Docs
+    url: https://docs.cypress.io
+    about: Learn about Cypress testing

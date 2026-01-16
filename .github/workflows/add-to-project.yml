@@ -1,0 +1,12 @@
+name: Add Issues to Board
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-to-board:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue to project board
+        run: echo "Issue automation ready. Connect to GitHub Projects board manually or via GitHub CLI."

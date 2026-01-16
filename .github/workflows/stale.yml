@@ -1,0 +1,22 @@
+name: Stale Issues
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly on Sundays at 2 AM UTC
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: |
+            This issue has been inactive for 30 days. 
+            Please provide an update or this will be closed in 7 days.
+          stale-issue-label: 'stale'
+          days-before-stale: 30
+          days-before-close: 7
+          exempt-issue-labels: 'pinned,blocked'
+          only-labels: ''
