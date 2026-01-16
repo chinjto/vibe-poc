@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ThemeToggleComponent],
+  imports: [CommonModule, RouterOutlet, ButtonModule, ThemeToggleComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

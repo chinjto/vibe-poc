@@ -1,6 +1,5 @@
 /* Global Styles */
-/* Import PrimeNG base styles */
-@import 'primeng/resources/primeng.min.css';
+/* Import PrimeIcons for icon support */
 @import 'primeicons/primeicons.css';
 
 /* Theme Variables - Yellow Primary & Stone Surface */
@@ -43,8 +42,8 @@
   --p-component-padding: 1rem;
 }
 
-/* Dark Mode Theme */
-.dark-mode {
+/* Dark Mode Theme - Applied when .dark-mode class is on html element */
+html.dark-mode {
   /* Primary Color stays the same (Yellow) */
   --p-primary-50: #fffbeb;
   --p-primary-100: #fef3c7;
@@ -86,11 +85,12 @@ body {
   font-size: 1rem;
   background-color: var(--p-surface-0);
   color: var(--p-surface-900);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode {
-  background-color: var(--p-surface-0);
-  color: var(--p-surface-50);
+/* In dark mode, adjust text color for body */
+html.dark-mode body {
+  color: var(--p-text-color);
 }
 
 * {
